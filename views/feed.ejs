@@ -1,17 +1,18 @@
 <%- include('partials/header') -%>
   <div class="container feed">
-    <div class="row justify-content-center mt-5">
+    <!-- <div class="row justify-content-center mt-5"> -->
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-            <h4><%= posts[i].dishName %></h4>
-            <h5><%= posts[i].eateryName %></h5>
-          </li>
+          <!-- <li class="col-6 justify-content-between mt-5 gridbox"> -->
+            <li class="gridbox">
+              <a href="/post/<%= posts[i]._id%>">
+                <img class="img-fluid" src="<%= posts[i].image%>">
+              </a>
+              <h4><%= posts[i].dishName %></h4>
+              <h5><%= posts[i].eateryName %></h5>
+            </li>
         <% } %>
         </ul>
-    </div>
+    <!-- </div> -->
   </div>  
 <%- include('partials/footer') -%>

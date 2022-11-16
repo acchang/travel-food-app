@@ -24,14 +24,36 @@
 .justify-content-center {
     border: 15 px;
     border-color: black;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .feed {
-    border-radius: 30%;
+    background-color: aqua;
+    border-radius: 5%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .img-fluid {
-    width: 35%;
-    border-radius: 50%;
+    width:98%;
+    height:280px;
+    border-radius: 3%;
+    object-fit: cover;
+}
+
+.gridbox{
+    background-color: gainsboro;
+    border-color: black;
+    border: 2px;
+    border-style: solid;
+    padding: 5px;
+    margin: 0.1%;
+    border-radius: 0%;
+    width:24.8%;
+    height:350px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
 }
