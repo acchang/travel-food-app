@@ -3,3 +3,35 @@
     border-color: red;
     background-color: pink;
 }
+
+.index {
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+.row {
+    border: 5px;
+    border-color: brown;
+    border-radius: 50%;
+}
+
+.list-unstyled {
+    border: 10px;
+    border-color: purple;
+    border-radius: 50%;
+}
+
+.justify-content-center {
+    border: 15 px;
+    border-color: black;
+    border-radius: 50%;
+}
+
+.feed {
+    border-radius: 30%;
+}
+
+.img-fluid {
+    width: 35%;
+    border-radius: 50%;
+}
