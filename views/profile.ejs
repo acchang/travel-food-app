@@ -11,35 +11,42 @@
           <div class="mt-5">
             <h2>Details of your Surprise Bag</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                  <label for="dishName" class="form-label">Dish Name</label>
-                  <input type="text" class="form-control" id="dishName" name="dishName">
-              </div>
-              
-              <div class="mb-3">
-                <label for="eateryName" class="form-label">Proprietor</label>
-                <input type="text" class="form-control" id="eateryName" name="eateryName">
-              </div>
-
-              <div class="mb-3">
-                <label for="country" class="form-label">Country</label>
-                <input type="text" class="form-control" id="country" name="country">
-              </div>
-
-              <div class="mb-3">
-                <label for="caption" class="form-label">City</label>
-                <textarea class="form-control" id="city" name="city"></textarea>
-              </div>
-
-              <div class="mb-3">
-                <label for="caption" class="form-label">Remarks</label>
-                <textarea class="form-control" id="remarks" name="remarks"></textarea>
-              </div>
 
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
+
+              <div class="mb-3">
+                  <label for="Store" class="form-label">Store</label>
+                  <input type="text" class="form-control" id="Store" name="Store">
+              </div>
+              
+              <div class="mb-3">
+                <label for="City" class="form-label">City</label>
+                <input type="text" class="form-control" id="City" name="City">
+              </div>
+
+              <div class="mb-3">
+                <label for="Nabe" class="form-label">Nabe</label>
+                <input type="text" class="form-control" id="Nabe" name="Nabe">
+              </div>
+
+              <div class="mb-3">
+                <label for="Price" class="form-label">Price</label>
+                <input type="number" min="1" step="0.01" class="form-control" id="Price" name="Price">
+              </div>
+
+              <div class="mb-3">
+                <label for="Date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="Date" name="Date">
+              </div>
+
+              <div class="mb-3">
+                <label for="Details" class="form-label">Details</label>
+                <textarea class="form-control" id="Details" name="Details"></textarea>
+              </div>
+
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
           </div>

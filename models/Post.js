@@ -9,25 +9,29 @@ const PostSchema = new mongoose.Schema({
       type: String,
       require: true,
     },
-    dishName: {
+    Store: {
       type: String,
       required: true,
     },
-    eateryName: {
+    City: {
       type: String,
       require: true,
     },
-    country: {
+    Nabe: {
       type: String,
       required: true,
     },
-    city: {
+    Price: {
       type: String,
       required: true,
     },
-    remarks: {
+    Date: {
+      type: Date,
+      required: false,
+    },
+    Remarks: {
       type: String,
-      required: true,
+      required: false,
     },
     likes: {
       type: Number,
@@ -41,35 +45,6 @@ const PostSchema = new mongoose.Schema({
       type: Date,
       default: Date.now,
     },
-
-  // title: {
-  //   type: String,
-  //   required: true,
-  // },
-  // image: {
-  //   type: String,
-  //   require: true,
-  // },
-  // cloudinaryId: {
-  //   type: String,
-  //   require: true,
-  // },
-  // caption: {
-  //   type: String,
-  //   required: true,
-  // },
-  // likes: {
-  //   type: Number,
-  //   required: true,
-  // },
-  // user: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: "User",
-  // },
-  // createdAt: {
-  //   type: Date,
-  //   default: Date.now,
-  // },
 });
 
 module.exports = mongoose.model("Post", PostSchema);
