@@ -1,8 +1,58 @@
-.container {
-    border: 50px;
-    border-color: red;
-    background-color: pink;
+a:link { 
+    text-decoration: none;
+    color: #1d4d4e;
 }
+
+a:visited { 
+    text-decoration: none;
+    color: #1d4d4e;
+ }
+
+a:hover { 
+    text-decoration: none;
+    color: #1d4d4e;
+}
+
+a:active { 
+    text-decoration: none;
+    color: #1d4d4e;
+}
+
+.container {
+    border-color: red;
+    border: 0.5px;
+    border-style: dotted;
+}
+
+.header-title {
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.header-subtitle {
+    font-family: Open Sans,Helvetica Neue,Sans Serif;
+    font-family: var(--bs-body-font-family);
+    font-size: 1.25rem;
+    font-size: var(--bs-body-font-size);
+    font-weight: 400;
+    font-weight: var(--bs-body-font-weight);
+    line-height: 1.5;
+    line-height: var(--bs-body-line-height);
+    color: #114d4d;
+}
+
+.header-nav {
+    font-family: Open Sans,Helvetica Neue,Sans Serif;
+    font-family: var(--bs-body-font-family);
+    font-size: 1.25rem;
+    font-size: var(--bs-body-font-size);
+    font-weight: 400;
+    font-weight: var(--bs-body-font-weight);
+    line-height: 2rem;
+    line-height: var(--bs-body-line-height);
+    color: #114d4d;
+}
+
 
 .index {
     background-color: lightblue;
@@ -15,20 +65,19 @@
     border-radius: 50%;
 }
 
-.list-unstyled {
-    border: 10px;
-    border-color: purple;
-    border-radius: 50%;
-}
 
 .justify-content-center {
     border: 15 px;
     border-color: black;
-    /* border-radius: 50%; */
+}
+
+.header {
+    background-color:#fdf8f2;
+    color: #1d4d4e;
 }
 
 .feed {
-    background-color: aqua;
+    background-color: white;
     border-radius: 5%;
     display: flex;
     flex-wrap: wrap;
