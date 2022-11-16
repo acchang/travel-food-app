@@ -7,7 +7,46 @@
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
+
           <div class="mt-5">
+            <h2>Add a Dish</h2>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="dishName" class="form-label">Dish Name</label>
+                  <input type="text" class="form-control" id="dishName" name="dishName">
+              </div>
+              
+              <div class="mb-3">
+                <label for="eateryName" class="form-label">Proprietor</label>
+                <input type="text" class="form-control" id="eateryName" name="eateryName">
+              </div>
+
+              <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" id="country" name="country">
+              </div>
+
+              <div class="mb-3">
+                <label for="caption" class="form-label">City</label>
+                <textarea class="form-control" id="city" name="city"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="caption" class="form-label">Remarks</label>
+                <textarea class="form-control" id="remarks" name="remarks"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+
+
+
+          <!-- <div class="mt-5">
             <h2>Add a post</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
@@ -24,8 +63,11 @@
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
-          </div>
+          </div> -->
+
       </div>
+
+
       <div class="col-6">
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>

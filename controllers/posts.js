@@ -35,10 +35,13 @@ module.exports = {
       const result = await cloudinary.uploader.upload(req.file.path);
 
       await Post.create({
-        title: req.body.title,
+        dishName: req.body.dishName,
+        eateryName: req.body.eateryName,
+        country: req.body.country,
+        city: req.body.city,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        caption: req.body.caption,
+        remarks: req.body.remarks,
         likes: 0,
         user: req.user.id,
       });
