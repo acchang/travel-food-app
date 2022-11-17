@@ -5,11 +5,13 @@
           <div>
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
+              <p><strong>Home City</strong>: <%= user.homeCity %></p>
+              <p><strong>Nabe</strong>: <%= user.nabe %></p>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
 
           <div class="mt-5">
-            <h2>Details of your Surprise Bag</h2>
+            <h2>Your Haul</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
 
               <div class="mb-3">
