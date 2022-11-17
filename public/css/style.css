@@ -102,8 +102,7 @@ a:active {
 
 /* The Modal (background) */
 .modal {
-    /* display: none; */
-     /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -128,19 +127,14 @@ a:active {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
     font-family: Open Sans,Helvetica Neue,Sans Serif;
     font-family: var(--bs-body-font-family);
-    font-size: 1rem;
+    font-size: xxx-large;
     font-size: var(--bs-body-font-size);
     font-weight: 300;
     font-weight: var(--bs-body-font-weight);
     line-height: 2rem;
     line-height: var(--bs-body-line-height);
-
-
-
-    font-size: 0.75rem;
     bottom: 0;
     background-color: #fefefe;
     width: 75%;
@@ -204,44 +198,34 @@ a:active {
   }
 
 .form {
+  display: block;
   padding: 2%;
+  font-family: Open Sans,Helvetica Neue,Sans Serif;
+  font-family: var(--bs-body-font-family);
+  font-size: 6rem;
+  font-size: var(--bs-body-font-size);
+  font-weight: 300;
+  font-weight: var(--bs-body-font-weight);
+  line-height: 100rem;
+  line-height: var(--bs-body-line-height);
 }
 
 .form-row{
-  display: inline-block;
+  display: flex;
 }
 
 .form-left {
+  display: inline-block;
   width: 50%;
+  padding: 4px;
 }
 
 .form-right {
+  display: inline-block;
   width: 50%;
+  padding: 4px;
 }
 
-
-
-  /* .inline {
-    display: inline-block;
-    width: 40%;
-    margin: 8px 0;
-  }
-
-  .form-label {
-    width: 5%;
-    display: inline-block;
-  }
-
-  #Details {
-    height: 5em;
-    width: 100%;
-    display: inline-block;
-  }
-
-  .display-flex {
-    display: flex;
-  }
-
-  .space-btw {
-    justify-content: space-between;
-  } */
+.form-input {
+  width: 80%;
+}
