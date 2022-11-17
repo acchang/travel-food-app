@@ -15,4 +15,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
+router.get("/nabe", ensureAuth, postsController.getProfile);
+
+
 module.exports = router;

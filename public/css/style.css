@@ -19,9 +19,9 @@ a:active {
 }
 
 .container {
-    border: 0.5px;
-    border-style: dotted;
-    border-color: red;
+    /* border: 0.5px;
+    border-style: dotted; */
+    /* border-color: red; */
 }
 
 .header-title {
@@ -59,29 +59,38 @@ a:active {
 }
 
 .header {
-    background-color:#fdf8f2;
-    color: #1d4d4e;
     display: flex;
     justify-content: space-between;
+    background-color:#fdf8f2;
+    color: #1d4d4e;
 }
 
 .feed {
-    background-color: greenyellow;
     border-radius: 5%;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .gridbox{
     background-color: gainsboro;
-    border: 12px;
-    border-style: dotted;
-    border-color: red;
+    /* border: 1px;
+    border-style: dotted; */
+    /* border-color: red; */
     padding: 5px;
     margin: 0.1%;
     border-radius: 0%;
-    width: 33.3%;
+    width: 24.8%;
     height: 350px;
+}
+
+.caption {    
+    font-family: Open Sans,Helvetica Neue,Sans Serif;
+    font-family: var(--bs-body-font-family);
+    font-size: 0.75rem;
+    font-size: var(--bs-body-font-size);
+    font-weight: 900;
+    font-weight: var(--bs-body-font-weight);
+    line-height: 1;
+    line-height: var(--bs-body-line-height);
+    color: #114d4d;
 }
 
 .img-fluid {
@@ -91,3 +100,97 @@ a:active {
     object-fit: cover;
 }
 
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    margin: auto;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
+    /* position: fixed; */
+    font-size: 0.75rem;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 75%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {
+    padding: 2px 16px;
+    margin: auto;
+}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
