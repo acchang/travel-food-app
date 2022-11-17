@@ -100,11 +100,10 @@ a:active {
     object-fit: cover;
 }
 
-
-
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+    /* display: none; */
+     /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -123,15 +122,24 @@ a:active {
   
   /* Modal Content */
   .modal-content {
-
+    padding: 10px;
     position: absolute;
     float: left;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
+    font-family: Open Sans,Helvetica Neue,Sans Serif;
+    font-family: var(--bs-body-font-family);
+    font-size: 1rem;
+    font-size: var(--bs-body-font-size);
+    font-weight: 300;
+    font-weight: var(--bs-body-font-weight);
+    line-height: 2rem;
+    line-height: var(--bs-body-line-height);
 
-    /* position: fixed; */
+
+
     font-size: 0.75rem;
     bottom: 0;
     background-color: #fefefe;
@@ -159,7 +167,7 @@ a:active {
   
   .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #1d4d4e;;
     color: white;
   }
   
@@ -170,7 +178,7 @@ a:active {
   
   .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #1d4d4e;;
     color: white;
   }
   
@@ -194,3 +202,46 @@ a:active {
     from {opacity: 0} 
     to {opacity: 1}
   }
+
+.form {
+  padding: 2%;
+}
+
+.form-row{
+  display: inline-block;
+}
+
+.form-left {
+  width: 50%;
+}
+
+.form-right {
+  width: 50%;
+}
+
+
+
+  /* .inline {
+    display: inline-block;
+    width: 40%;
+    margin: 8px 0;
+  }
+
+  .form-label {
+    width: 5%;
+    display: inline-block;
+  }
+
+  #Details {
+    height: 5em;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .space-btw {
+    justify-content: space-between;
+  } */

@@ -58,45 +58,47 @@
       <span class="close">&times;</span>
       <h2>Add your bag</h2>
     </div>
-    <div class="mt-5">
+    <div class="form">
       <form action="/post/createPost" enctype="multipart/form-data" method="POST">
   
-        <div class="mb-3">
-          <label for="imgUpload" class="form-label">Image</label>
-           <input type="file" class="form-control" id="imageUpload" name="file">
+        <div class="form-row">
+          
+          <div class="form-left">
+          <label for="imgUpload" class="form-label inline">Image</label>
+          <input type="file" class="form-control inline" id="imageUpload" name="file">
+          </div>
+
+          <div class="form-right">
+          <label for="Store" class="form-label inline">Store</label>
+          <input type="text" class="form-control inline" id="Store" name="Store">
+          </div>
+
+        </div>
+
+        <div>
+          <label for="City" class="form-label inline">City</label>
+          <input type="text" class="form-control inline" id="City" name="City">
+
+          <label for="Nabe" class="form-label inline">Nabe</label>
+          <input type="text" class="form-control inline" id="Nabe" name="Nabe">
         </div>
   
-        <div class="mb-3">
-            <label for="Store" class="form-label">Store</label>
-            <input type="text" class="form-control" id="Store" name="Store">
-        </div>
-        
-        <div class="mb-3">
-          <label for="City" class="form-label">City</label>
-          <input type="text" class="form-control" id="City" name="City">
+        <div>
+          <label for="Price" class="form-label inline">Price</label>
+          <input type="number" min="1" step="0.01" class="form-control inline" id="Price" name="Price">
+
+          <label for="Date" class="form-label inline">Date</label>
+          <input type="date" class="form-control inline" id="Date" name="Date">
         </div>
   
-        <div class="mb-3">
-          <label for="Nabe" class="form-label">Nabe</label>
-          <input type="text" class="form-control" id="Nabe" name="Nabe">
+        <div class="display-flex space-btw">
+          <span>
+          <label for="Details" class="form-label inline">Details</label>
+          <textarea class="form-control inline" id="Details" name="Details"></textarea>
+          </span>
+
+          <button type="submit" class="inline btn btn-primary" value="Upload">Submit</button>
         </div>
-  
-        <div class="mb-3">
-          <label for="Price" class="form-label">Price</label>
-          <input type="number" min="1" step="0.01" class="form-control" id="Price" name="Price">
-        </div>
-  
-        <div class="mb-3">
-          <label for="Date" class="form-label">Date</label>
-          <input type="date" class="form-control" id="Date" name="Date">
-        </div>
-  
-        <div class="mb-3">
-          <label for="Details" class="form-label">Details</label>
-          <textarea class="form-control" id="Details" name="Details"></textarea>
-        </div>
-  
-        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
       </form>
     </div>
     <!-- <div class="modal-footer">
@@ -137,22 +139,3 @@
   
   </body>
 </html>
-
-  <!-- <body class="d-flex h-100s">
-      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffff">
-        <div class="container">
-          <a class="navbar-brand" href="/">
-            <img src="imgs/favicon-32x32.png" alt="" width="100" height="100">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <a class="btn btn-outline-dark btn-nav" href="/login" role="button">Login</a>
-              <a class="btn-sign-in btn btn-nav" href="/signup" role="button">Sign up</a>
-          </div>
-        </div>
-      </nav>
-  </body>
-</html> -->
