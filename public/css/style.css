@@ -19,9 +19,9 @@ a:active {
 }
 
 .container {
-    border-color: red;
     border: 0.5px;
     border-style: dotted;
+    border-color: blue;
 }
 
 .header-title {
@@ -59,34 +59,18 @@ a:active {
     border-radius: 50%;
 }
 
-.row {
-    border: 5px;
-    border-color: brown;
-    border-radius: 50%;
-}
-
-.justify-content-center {
-    border: 15 px;
-    border-color: black;
-}
-
 .header {
     background-color:#fdf8f2;
     color: #1d4d4e;
+    display: flex;
+    justify-content: space-between;
 }
 
 .feed {
-    background-color: white;
+    background-color: greenyellow;
     border-radius: 5%;
     display: flex;
     flex-wrap: wrap;
-}
-
-.img-fluid {
-    width:98%;
-    height:280px;
-    border-radius: 3%;
-    object-fit: cover;
 }
 
 .gridbox{
@@ -97,11 +81,14 @@ a:active {
     padding: 5px;
     margin: 0.1%;
     border-radius: 0%;
-    width:44%;
+    width:100%;
     height:350px;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
+.img-fluid {
+    width:98%;
+    height:280px;
+    border-radius: 3%;
+    object-fit: cover;
 }
+
