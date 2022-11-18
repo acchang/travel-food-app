@@ -1,7 +1,7 @@
 # TooGoodToBeASurprise
 "Build what you like and what interests you," they said. So I built this full-stack app inspired by an app I really enjoy, and speaks to my interests (food) and values (environmental concerns and waste reduction).
 
-ToGoodToGo is an app aimed at reducing food waste by creating a new market for food vendors who would otherwise throw out their product. Think of bakery day-olds, bagels in the evening, or even berries at the close of a farmer's market, or the staples like mashed potatoes or beans and rice a restaurant may have at the end of the night. 
+ToGoodToGo is an app aimed at reducing food waste by creating a new market for food vendors who would otherwise throw out their product. Think of bakery day-olds, bagels in the evening, even berries at the close of a farmer's market, or the staples like mashed potatoes or beans and rice a restaurant may have at the end of the night. 
 
 Traditionally, these things have gone in the trash because it made no sense to keep them. People usually want them fresh. 
 

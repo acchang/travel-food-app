@@ -27,7 +27,7 @@ const PostSchema = new mongoose.Schema({
     },
     Date: {
       type: Date,
-      required: false,
+      required: true,
     },
     Remarks: {
       type: String,
