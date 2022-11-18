@@ -1,8 +1,8 @@
-<%- include('partials/header') -%>
+<%- include('partials/logged-in-header') -%>
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
-      <h2><%= post.Store %></h2>
+      <h2><%= post.Store %>, <%= post.Price %></h2>
       <img class="img-fluid" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <form

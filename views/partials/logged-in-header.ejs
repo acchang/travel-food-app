@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Munch Abroad</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>TooGoodToBeASurprise</title>
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/imgs/favicon-32x32.png"
+      href="/imgs/econ-textless.svg"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -26,25 +27,93 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body class="d-flex h-100">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffff">
-        <div class="container">
+
+  <body>
+    <header>
+    <div class="container header">
           <a class="navbar-brand" href="/feed">
-            <img src="/imgs/favicon-32x32.png" alt="" width="100" height="100">
+            <img src="/imgs/econ-textless.svg" alt="" width="100" height="100">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <span class="navbar-text">Hello, <%= user.userName %></span>
-              <a class="nav-link active" aria-current="page" href="/feed">Explore</a>
-              <!-- <a class="nav-link" href="/my-recipes">My Recipes</a>
-              <a class="nav-link" href="/bookmarks">Favorite Recipes</a> -->
-              <a class="nav-link" href="/profile">Add Recipe</a>
-              <a href="/logout" class="btn btn-dark btn-nav" role="button">Logout</a>
+
+          <div class="title">
+            <h1 class="header-title"><a href="/feed">TooGoodToBeSurprised</a></h1>
+            <span class="header-subtitle">Revealing the Secrets of TooGoodToGo's Surprise Bags</span>
+              <div class="header-nav">
+                <a href="/profile">My Profile</a> | My City |  
+                <a href="/nabe">My Nabe</a> | My Faves | 
+                <a id="myBtn">Add Surprise Bag</a>
+                <p></p>
+                <p></p>
+              </div>
+              <p></p>
           </div>
         </div>
-      </nav>
+    </header>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Add your bag</h2>
+    </div>
+    <div class="form">
+      <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+  
+        <div class="form-row">
+          <div class="form-left">
+          <label for="imgUpload" class="form-label">Image</label>
+          <input type="file" class="form-input" id="imageUpload" name="file">
+          </div>
+
+          <div class="form-right">
+          <label for="Store" class="form-label">Store</label>
+          <input type="text" class="form-input" id="Store" name="Store">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-left">
+          <label for="City" class="form-label">City</label>
+          <input type="text" class="form-input" id="City" name="City">
+          </div>
+
+          <div class="form-right">
+          <label for="Nabe" class="form-label">Nabe</label>
+          <input type="text" class="form-input" id="Nabe" name="Nabe">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-left">
+          <label for="Price" class="form-label">Price</label>
+          <input type="number" min="1" step="0.01" class="form-input" id="Price" name="Price">
+          </div>
+
+          <div class="form-right">
+          <label for="Date" class="form-label">Date</label>
+          <input type="date" class=" id="Date" name="Date">
+          </div>
+        </div>
+  
+
+        <div class="form-row">
+          <div class="form-left">
+          <label for="Details" class="form-label">Details</label>
+          <textarea class="form-input" id="Details" name="Details"></textarea>
+          </div>
+
+          <div class="form-right">
+            <button type="submit" class="inline btn btn-primary" value="Upload">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <script src="js/modal-script.js"></script>
   </body>
 </html>
+

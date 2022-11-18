@@ -31,94 +31,30 @@
   <body>
     <header>
     <div class="container header">
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand" href="/feed">
             <img src="/imgs/econ-textless.svg" alt="" width="100" height="100">
           </a>
 
           <div class="title">
             <h1 class="header-title"><a href="/feed">TooGoodToBeSurprised</a></h1>
             <span class="header-subtitle">Revealing the Secrets of TooGoodToGo's Surprise Bags</span>
-              <div class="header-nav">
-                <a href="/profile">My Profile</a> | My City |  
-                <a href="/nabe">My Nabe</a> | My Faves | 
-                <a id="myBtn">Add Bag</a>
-                <p></p>
-                <p></p>
-              </div>
+          
+          <div>
+            <a href="/login" class="col-3 btn btn-primary"> Login</a>
+            <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+          </div>
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <a class="btn btn-outline-dark btn-nav" href="/login" role="button">Login</a>
+                <a class="btn-sign-in btn btn-nav" href="/signup" role="button">Sign up</a>
+            </div> -->
+
               <p></p>
           </div>
         </div>
     </header>
-
-<!-- Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Add your bag</h2>
-    </div>
-    <div class="form">
-      <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-  
-        <div class="form-row">
-          <div class="form-left">
-          <label for="imgUpload" class="">Image</label>
-          <input type="file" class="form-input" id="imageUpload" name="file">
-          </div>
-
-          <div class="form-right">
-          <label for="Store" class="">Store</label>
-          <input type="text" class="form-input" id="Store" name="Store">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-left">
-          <label for="City" class="">City</label>
-          <input type="text" class="form-input" id="City" name="City">
-          </div>
-
-          <div class="form-right">
-          <label for="Nabe" class="">Nabe</label>
-          <input type="text" class="form-input" id="Nabe" name="Nabe">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-left">
-          <label for="Price" class="">Price</label>
-          <input type="number" min="1" step="0.01" class="form-input" id="Price" name="Price">
-          </div>
-
-          <div class="form-right">
-          <label for="Date" class="">Date</label>
-          <input type="date" class=" id="Date" name="Date">
-          </div>
-        </div>
-  
-
-        <div class="form-row">
-          <div class="form-left">
-          <label for="Details" class="">Details</label>
-          <textarea class="form-input" id="Details" name="Details"></textarea>
-          </div>
-
-          <div class="form-right">
-            <button type="submit" class="inline btn btn-primary" value="Upload">Submit</button>
-          </div>
-        </div>
-
-          
-      
-      </form>
-    </div>
-    <!-- <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div> -->
-  </div>
-</div>
-
-  <script src="js/modal-script.js"></script>
   </body>
 </html>
