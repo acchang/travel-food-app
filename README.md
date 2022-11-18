@@ -26,6 +26,8 @@ Once I got the likes right, I could use the data to make a favorites list.
 
 Comments are also in (and hidden). I would like to tie them to user identity.
 
+There are minor issues with the form. The date is required, but I don't have a default for it nor does it throw an error. Similarly, with the image uploader, `.gif`s just crash the system. I need to exclude and throw and error.
+
 ## Lessons Learned
 
 The form for entering data can be pushed to a modal, but the modal is best done client-side. It's cumbersome on the server side. 
@@ -45,3 +47,4 @@ For example, `user: req.user` needed to be added to the render here, even though
   },
   ```
 
+In order to have a readable date, without using moment.js, I used `post.Date.toDateString();` ... However th `toDateString` method fails if there is no date. So I need to require a date.

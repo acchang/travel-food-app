@@ -162,13 +162,9 @@ a:active {
 
 .City-main, .Nabe-main {
   font-family: Open Sans,Helvetica Neue,Sans Serif;
-  font-family: var(--bs-body-font-family);
-  font-size: 10rem;
-  font-size: var(--bs-body-font-size);
-  font-weight: 900;
-  font-weight: var(--bs-body-font-weight);
+  font-size: 3rem;
+  font-weight: 400;
   line-height: 1;
-  line-height: var(--bs-body-line-height);
   background-color: #114d4d;
   color: white;
   width: 100%;
