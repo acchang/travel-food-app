@@ -18,12 +18,6 @@ a:active {
     color: #1d4d4e;
 }
 
-.container {
-    /* border: 0.5px;
-    border-style: dotted; */
-    /* border-color: red; */
-}
-
 .header-title {
     font-weight: 900;
     line-height: 1.2;
@@ -172,7 +166,7 @@ a:active {
 
 .form {
   display: block;
-  padding: 2%;
+  padding: 1%;
   font-family: Open Sans,Helvetica Neue,Sans Serif;
   font-family: var(--bs-body-font-family);
   font-size: 6rem;
@@ -191,12 +185,14 @@ a:active {
   display: inline-block;
   width: 50%;
   padding: 4px;
+  margin: 2px;
 }
 
 .form-right {
   display: inline-block;
   width: 50%;
   padding: 4px;
+  margin: 2px;
 }
 
 .form-input {
