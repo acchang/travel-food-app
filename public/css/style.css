@@ -1,3 +1,53 @@
+/* general */
+
+.container {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  background-color: #1d4d4e;
+  border-color: #1d4d4e;
+  color: white;
+  padding: 5px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #1d4d4e;
+  color: yellow;
+  transition: 0.7s;
+}
+
+.login{
+  background-color: white;
+  color: #1d4d4e;
+}
+
+.login:hover {
+  background-color:#1d4d4e;
+  color: white;
+  transition: 0.7s;
+}
+
+/* .signup{
+  background-color: #1d4d4e;
+  color: #ffff;
+} 
+
+.signup:hover {
+  background-color: #1d4d4e;
+  color: yellow;
+  transition: 0.7s;
+} */
+
+
 a:link { 
     text-decoration: none;
     color: #1d4d4e;
@@ -16,6 +66,16 @@ a:hover {
 a:active { 
     text-decoration: none;
     color: #1d4d4e;
+}
+
+/* all headers  */
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color:#fdf8f2;
+  color: #1d4d4e;
 }
 
 .header-title {
@@ -47,17 +107,39 @@ a:active {
     color: #114d4d;
 }
 
-.index {
-    background-color: lightblue;
-    border-radius: 50%;
+/* index page and others*/
+
+.splash {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    background-color:#fdf8f2;
-    color: #1d4d4e;
+.splash-holder{
+  position: relative;
+  text-align: center;
 }
+
+.centered-index-head { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff!important;
+  font-family: Arial Black, Helvetica, sans-serif;
+  font-size: 15vh;
+  font-weight: 999;
+}
+
+.centered-index-text { 
+  padding: 5%;
+  background-color: #fdf8f2;
+  color: #1d4d4e;
+  font-family: Open Sans,Helvetica Neue,Sans Serif;
+}
+
+
+
+/* cards and elements */
 
 .feed {
     border-radius: 5%;
@@ -164,6 +246,8 @@ a:active {
     margin: auto;
 }
 
+/* add a bag form */
+
 .form {
   display: block;
   padding: 1%;
@@ -226,12 +310,3 @@ a:active {
   }
 
 
-  .login{
-    background-color: white;
-    color: black;
-  }
-
-  .signup{
-    background-color: #1d4d4e;
-    color: #ffff;
-  }
