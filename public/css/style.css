@@ -60,9 +60,9 @@ a:active {
   color: #ffff !important;
 } 
 
-.signup:hover {
+.signup:hover, .logout:hover {
   background-color: #1d4d4e;
-  color: yellow;
+  color: yellow !important;
   transition: 0.7s;
 }
 
