@@ -55,9 +55,9 @@ a:active {
   transition: 0.7s;
 }
 
-.signup{
+.signup, .logout {
   background-color: #1d4d4e;
-  color: #ffff;
+  color: #ffff !important;
 } 
 
 .signup:hover {
@@ -65,8 +65,6 @@ a:active {
   color: yellow;
   transition: 0.7s;
 }
-
-
 
 
 /* all headers  */
