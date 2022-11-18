@@ -19,6 +19,19 @@ module.exports = {
       console.log(err);
     }
   },
+
+// figure out how to get all same Nabes - find user nabe?
+
+getNabe: async (req, res) => {
+  try {
+    const posts = await Post.find({ nabe: req.user.nabe });
+    res.render("nabe.ejs", { posts: posts, user: req.user });
+  } catch (err) {
+    console.log(err);
+  }
+},
+//// end
+
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);

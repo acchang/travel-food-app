@@ -1,4 +1,4 @@
-<%- include('partials/header') -%>
+<%- include('partials/logged-in-header') -%>
   <div class="container">
 
     Nabe
@@ -9,7 +9,6 @@
               <a href="/post/<%= posts[i]._id%>">
                 <img class="img-fluid" src="<%= posts[i].image%>">
               </a>
-              <h4 class="caption"><%= posts[i].Nabe %>, <%= posts[i].City %> </h4>
               <h4 class="caption"><%= posts[i].Store %>, $<%= posts[i].Price %> </h4>
             </li>
         <% } %>

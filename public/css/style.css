@@ -155,7 +155,7 @@ a:active {
   
   .modal-header {
     padding: 2px 16px;
-    background-color: #1d4d4e;;
+    background-color: #1d4d4e;
     color: white;
   }
   
@@ -225,3 +225,13 @@ a:active {
     to {opacity: 1}
   }
 
+
+  .login{
+    background-color: white;
+    color: black;
+  }
+
+  .signup{
+    background-color: #1d4d4e;
+    color: #ffff;
+  }
