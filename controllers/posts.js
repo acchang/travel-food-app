@@ -20,17 +20,34 @@ module.exports = {
     }
   },
 
-// figure out how to get all same Nabes - find user nabe?
-
 getNabe: async (req, res) => {
   try {
-    const posts = await Post.find({ nabe: req.user.nabe });
+    const posts = await Post.find({ Nabe: req.user.nabe });
     res.render("nabe.ejs", { posts: posts, user: req.user });
   } catch (err) {
     console.log(err);
   }
 },
-//// end
+
+getCity: async (req, res) => {
+  try {
+    const posts = await Post.find({ City: req.user.homeCity });
+    res.render("city.ejs", { posts: posts, user: req.user });
+  } catch (err) {
+    console.log(err);
+  }
+},
+
+getFaves: async (req, res) => {
+  try {
+    const posts = await Post.find({ Nabe: req.user.nabe });
+    res.render("faves.ejs", { posts: posts, user: req.user, comments: comments });
+  } catch (err) {
+    console.log(err);
+  }
+},
+
+
 
   getPost: async (req, res) => {
     try {

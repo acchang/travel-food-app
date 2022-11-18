@@ -16,6 +16,7 @@ router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
 router.get("/nabe", ensureAuth, postsController.getNabe);
+router.get("/city", ensureAuth, postsController.getCity);
 
 
 module.exports = router;
