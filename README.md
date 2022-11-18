@@ -9,15 +9,16 @@ This app lets people know when food vendors have such excess, and lets people bu
 
 It doesn't always work as intended though. Some vendors put poor products in the bag, or the bag doesn't reach the promised three times the retail value. I thought it would be fun to track what vendors offer what, and sort them by neighborhood or city when people wanted to explore.
 
-
-
 ## How It's Made
+Node.js, Express, CSS, JavaScript, MongoDB, EJS.
 
 ## Special Features
 
+The use of the header to contain the nav bar when logged in, and to hold Login/Sign In options when not is a feature I really enjoyed figuring out and building. It's less complicated than I first thought.
+
 ## Optimizations
 
-Right not the likes are unattached to user_id and just increment. I've hidden that feature for now.
+The likes are not attached to user_id and just increment. I've hidden that feature for now.
 
 I would like to make location changeable.
 
@@ -26,4 +27,21 @@ Once I got the likes right, I could use the data to make a favorites list.
 Comments are also in (and hidden). I would like to tie them to user identity.
 
 ## Lessons Learned
+
+The form for entering data can be pushed to a modal, but the modal is best done client-side. It's cumbersome on the server side. 
+
+There were times when a call for user info in the logged-in header went unanswered and crashed the app. That's because the main page didn't pull it in as part of the render.
+
+For example, `user: req.user` needed to be added to the render here, even though `feed.ejs` doesn't use it - but the header does.
+
+```
+  getFeed: async (req, res) => {
+    try {
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      res.render("feed.ejs", { posts: posts, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  ```
 

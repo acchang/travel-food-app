@@ -1,6 +1,8 @@
 <%- include('partials/logged-in-header') -%>
+
+
   <div class="container">
-    
+    <div class="City-main">&nbsp; &nbsp; &nbsp; &nbsp;<%= user.homeCity %></div>
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
             <li class="gridbox">
