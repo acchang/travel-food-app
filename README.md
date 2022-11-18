@@ -17,5 +17,13 @@ It doesn't always work as intended though. Some vendors put poor products in the
 
 ## Optimizations
 
+Right not the likes are unattached to user_id and just increment. I've hidden that feature for now.
+
+I would like to make location changeable.
+
+Once I got the likes right, I could use the data to make a favorites list.
+
+Comments are also in (and hidden). I would like to tie them to user identity.
+
 ## Lessons Learned
 
