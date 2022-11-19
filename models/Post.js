@@ -27,9 +27,16 @@ const PostSchema = new mongoose.Schema({
     },
     Details: {
       type: String,
-      required: false,
+      // required: false,
       default: "yikes",
     },
+
+    createdAt: {
+      type: Date,
+      // required: false,
+      default: Date.now,
+    },
+
     likes: {
       type: Number,
       required: true,
@@ -37,11 +44,6 @@ const PostSchema = new mongoose.Schema({
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-    },
-    createdAt: {
-      type: Date,
-      required: false,
-      default: Date.now,
     },
 });
 
