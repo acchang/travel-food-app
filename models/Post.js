@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
-    cloudinaryId: {
+  Author: {
+    type: String,
+    require: true,
+  },
+  cloudinaryId: {
       type: String,
       require: true,
     },

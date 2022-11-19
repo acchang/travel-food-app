@@ -1,9 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
-
-//added User
 const User = require("../models/User");
-
 const Comment = require("../models/Comment");
 
 module.exports = {
@@ -62,16 +59,11 @@ getCity: async (req, res) => {
   },
   createPost: async (req, res) => {
     try {
-      // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
-      
       const userfile = await User.findById({ _id: req.user.id }) 
-      // const creator = userfile.userName;
-      // let post = await Post.findById({ _id: req.params.id });
 
       await Post.create({
         Author: userfile.userName,
-
         Store: req.body.Store,
         City: req.body.City,
         Nabe: req.body.Nabe,
@@ -83,9 +75,7 @@ getCity: async (req, res) => {
         likes: 0,
         user: req.user.id,
       });
-
-      console.log("author: " + userfile.userName);
-      // console.log("Post has been added!");
+      console.log("Post has been added!");
       res.redirect("/profile");
     } catch (err) {
       console.log(err);
