@@ -57,8 +57,10 @@ So I had to: `const User = require("../models/User");` in the controller.
 Then I used `findbyId` and `user.id` from the `post` schema to define the `user` document of `user.id` by writing `const userfile = await User.findById({ _id: req.user.id })`
 
 Then I was able to create the field in the `post` controller:
-```await Post.create({
-        Author: userfile.userName,```
+```
+await Post.create({
+        Author: userfile.userName,
+```
 
 Finally I had to alter the `post` schema to record `Author`:
 
@@ -67,4 +69,5 @@ const PostSchema = new mongoose.Schema({
   Author: {
     type: String,
     require: true,
-  },```
+  },
+```
