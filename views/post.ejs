@@ -13,7 +13,7 @@
       <div class="post-info"> <%= post.Nabe %>, <%= post.City %></div>
 
       <div class="post-label">Purchase Date:</div>
-      <div class="post-info"> <%= post.createdAt.toDateString(); %> </div>
+      <div class="post-info"> <%= post.createdAt; %> </div>
 
       <div class="post-delete"><%if(post.user == user.id){ %> </div>
         <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">

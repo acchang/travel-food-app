@@ -66,7 +66,6 @@ getCity: async (req, res) => {
         City: req.body.City,
         Nabe: req.body.Nabe,
         Price: req.body.Price,
-        // Date: req.body.Date,
         createdAt: req.body.createdAt,
         image: result.secure_url,
         cloudinaryId: result.public_id,
