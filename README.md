@@ -30,9 +30,9 @@ There are minor issues with the form. The date is required, but I don't have a d
 
 ## Lessons Learned
 
-The form for entering data can be pushed to a modal, but the modal is best done client-side. It's cumbersome on the server side. 
+* The form for entering data can be pushed to a modal, but the modal is best done client-side. It's cumbersome on the server side. 
 
-There were times when a call for user info in the logged-in header went unanswered and crashed the app. That's because the main page didn't pull it in as part of the render.
+* There were times when a call for user info in the logged-in header went unanswered and crashed the app. That's because the main page didn't pull it in as part of the render.
 
 For example, `user: req.user` needed to be added to the render here, even though `feed.ejs` doesn't use it - but the header does.
 
@@ -47,4 +47,24 @@ For example, `user: req.user` needed to be added to the render here, even though
   },
   ```
 
-In order to have a readable date, without using moment.js, I used `post.Date.toDateString();` ... However the `toDateString` method fails if there is no date. So I need to require a date.
+* In order to have a readable date, without using moment.js, I used `post.Date.toDateString();` ... However the `toDateString` method fails if there is no date. So I need to require a date.
+
+* I learned to use two databases, pulling from one to get info from another.
+
+In my `post` controller, I had it using values from the `post` schema to push to the `post` view. I wanted the `post` view to show the name of the creator, but `post` controller only got the `user.id` from the `post` schema.
+
+So I had to: `const User = require("../models/User");` in the controller.
+Then I used `findbyId` and `user.id` from the `post` schema to define the `user` document of `user.id` by writing `const userfile = await User.findById({ _id: req.user.id })`
+
+Then I was able to create the field in the `post` controller:
+```await Post.create({
+        Author: userfile.userName,```
+
+Finally I had to alter the `post` schema to record `Author`:
+
+```
+const PostSchema = new mongoose.Schema({
+  Author: {
+    type: String,
+    require: true,
+  },```
