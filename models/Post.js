@@ -27,7 +27,7 @@ const PostSchema = new mongoose.Schema({
     },
     Details: {
       type: String,
-      required: true,
+      required: false,
       default: "yikes",
     },
     likes: {
@@ -40,7 +40,7 @@ const PostSchema = new mongoose.Schema({
     },
     createdAt: {
       type: Date,
-      required: true,
+      required: false,
       default: Date.now,
     },
 });
