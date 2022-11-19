@@ -47,4 +47,4 @@ For example, `user: req.user` needed to be added to the render here, even though
   },
   ```
 
-In order to have a readable date, without using moment.js, I used `post.Date.toDateString();` ... However th `toDateString` method fails if there is no date. So I need to require a date.
+In order to have a readable date, without using moment.js, I used `post.Date.toDateString();` ... However the `toDateString` method fails if there is no date. So I need to require a date.

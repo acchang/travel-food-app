@@ -25,13 +25,14 @@ const PostSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    Date: {
-      type: Date,
-      required: true,
-    },
-    Remarks: {
+    // Date: {
+    //   type: Date,
+    //   required: true,
+    // },
+    Details: {
       type: String,
       required: false,
+      default: "yikes",
     },
     likes: {
       type: Number,

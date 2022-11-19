@@ -209,9 +209,7 @@ a:active {
 
 .gridbox{
     background-color: gainsboro;
-    /* border: 1px;
-    border-style: dotted; */
-    /* border-color: red; */
+
     padding: 5px;
     margin: 0.1%;
     border-radius: 0%;
