@@ -9,6 +9,10 @@ This app lets people know when food vendors have such excess, and lets people bu
 
 It doesn't always work as intended though. Some vendors put poor products in the bag, or the bag doesn't reach the promised three times the retail value. I thought it would be fun to track what vendors offer what, and sort them by neighborhood or city when people wanted to explore.
 
+I had started with a similar format, but back then I wanted to document my favorite foods around the world. I didn't think a site like that had the potential of regular visits though, so my mind went to the TooGoodToGo app, which is full of similar food discoveries, but would be used more frequently. It was also building off another site, so I could borrow their design sensibilities. So many other sites look like they're built by coders and not designers.
+
+The navigation is created with an intent to offer value to regular users. The category of "Nabe" will allow you to target places to try rin your neighborhood. The categort of city is if you want to explore a new neighborhood and go farther afield. That's how I would use this app anyway. Reddit has a TGTG group that already has such information, but it's also cluttered with comments and you have to drill down for info most relevant to you. This is my attempt at improving on that.
+
 ## How It's Made
 Node.js, Express, CSS, JavaScript, MongoDB, EJS.
 

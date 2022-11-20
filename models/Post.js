@@ -7,43 +7,41 @@ const PostSchema = new mongoose.Schema({
   },
   cloudinaryId: {
       type: String,
-      require: true,
+      require: false,
     },
     image: {
       type: String,
-      require: true,
+      require: false,
     },
     Store: {
       type: String,
-      required: true,
+      required: false,
     },
     City: {
       type: String,
-      require: true,
+      require: false,
     },
     Nabe: {
       type: String,
-      required: true,
+      required: false,
     },
     Price: {
       type: String,
-      required: true,
+      required: false,
     },
     Details: {
       type: String,
-      // required: false,
-      default: "yikes",
+      required: false,
     },
 
     createdAt: {
       type: Date,
-      // required: false,
-      default: Date.now,
+      required: false,
     },
 
     likes: {
       type: Number,
-      required: true,
+      required: false,
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
