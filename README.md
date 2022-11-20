@@ -22,15 +22,16 @@ The use of the header to contain the nav bar when logged in, and to hold Login/S
 
 ## Optimizations
 
-The likes are not attached to user_id and just increment. I've hidden that feature for now.
+* I would like to make location changeable and clickable at each entry so that you can group by all locations, not just your own.
 
-I would like to make location changeable.
+* There are minor issues with the form, if anything goes unfilled. There are errors if the photo field is null or you try to upload a gif. 
 
-Once I got the likes right, I could use the data to make a favorites list.
+There is a default for the date, but it's based on if the value from the form is undefined, and the form puts out null when nothing is added. This is a problem because I format the date with `.toDateString()` but that doesn't work on `null`.
 
-Comments are also in (and hidden). I would like to tie them to user identity.
+* There is a likes feature, but it's hidden because the likes are not attached to user_id and just increment regardless of user. After likes are tied to users, I could use the data to make a favorites list.
 
-There are minor issues with the form. The date is required, but I don't have a default for it nor does it throw an error. Similarly, with the image uploader, `.gif`s just crash the system. I need to exclude and throw and error.
+* Comments are also in (and hidden). I also would like to tie them to user identity.
+
 
 ## Lessons Learned
 
