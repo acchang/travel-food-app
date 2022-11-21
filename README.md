@@ -22,6 +22,12 @@ The use of the header to contain the nav bar when logged in, and to hold Login/S
 
 ## Optimizations
 
+* Sometimes cyclic crashes. I've been told it's a quirk of its interaction with MongoDB:
+
+```
+There's a quirk with MongoDB on cyclic. You need to make app.listen() wait until you've connected to the database. https://docs.cyclic.sh/how-to/using-mongo-db
+```
+
 * I would like to make location changeable and clickable at each entry so that you can group by all locations, not just your own.
 
 * There is a likes feature, but it's hidden because the likes are not attached to user_id and just increment regardless of user. After likes are tied to users, I could use the data to make a favorites list.
