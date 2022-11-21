@@ -64,14 +64,14 @@ getCity: async (req, res) => {
 
       await Post.create({
         Author: userfile.userName,
-        Store: req.body.Store,
-        City: req.body.City,
-        Nabe: req.body.Nabe,
-        Price: req.body.Price,
-        createdAt: req.body.createdAt,
+        Store: req.body.Store === '' ? undefined : req.body.Store,
+        City: req.body.City === '' ? undefined : req.body.City,
+        Nabe: req.body.Nabe === '' ? undefined : req.body.Nabe,
+        Price: req.body.Price === '' ? undefined : req.body.Price,
+        createdAt: req.body.createdAt === '' ? undefined : req.body.createdAt,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        Details: req.body.Details,
+        Details: req.body.Details === '' ? undefined : req.body.Details,
         likes: 0,
         user: req.user.id,
       });

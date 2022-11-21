@@ -15,22 +15,27 @@ const PostSchema = new mongoose.Schema({
     },
     Store: {
       type: String,
+      default: 'not entered',
       required: false,
     },
     City: {
       type: String,
+      default: 'not entered',
       require: false,
     },
     Nabe: {
       type: String,
+      default: 'not entered',
       required: false,
     },
     Price: {
       type: String,
+      default: 'not entered',
       required: false,
     },
     Details: {
       type: String,
+      default: 'not entered',
       required: false,
     },
 
