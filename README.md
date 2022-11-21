@@ -24,10 +24,6 @@ The use of the header to contain the nav bar when logged in, and to hold Login/S
 
 * I would like to make location changeable and clickable at each entry so that you can group by all locations, not just your own.
 
-* There are minor issues with the form, if anything goes unfilled. There are errors if the photo field is null or you try to upload a gif. 
-
-There is a default for the date, but it's based on if the value from the form is undefined, and the form puts out null when nothing is added. This is a problem because I format the date with `.toDateString()` but that doesn't work on `null`.
-
 * There is a likes feature, but it's hidden because the likes are not attached to user_id and just increment regardless of user. After likes are tied to users, I could use the data to make a favorites list.
 
 * Comments are also in (and hidden). I also would like to tie them to user identity.
@@ -74,5 +70,17 @@ const PostSchema = new mongoose.Schema({
   Author: {
     type: String,
     require: true,
+  },
+```
+* There were minor issues with the form, if anything goes unfilled. If the photo field is null or you try to upload a gif, the console shows an error and it does not proceed.
+
+There is a default for the date, but it's based on if the value from the form is undefined, and the form puts out null when nothing is added. This is a problem because I format the date with `.toDateString()` but that doesn't work on `null`. The solution was to create a ternary in the controller, and add a default to the model. Much credit to JSDoza#9772 for helping me figure this out!
+
+```
+await Post.create({
+       ....other code
+        createdAt: req.body.createdAt,//ORGINAL LINE
+        createdAt: req.body.createdAt === '' ? undefined :  req.body.createdAt,//maybe like this
+    ....other code
   },
 ```

@@ -7,10 +7,14 @@ const PostSchema = new mongoose.Schema({
   },
   cloudinaryId: {
       type: String,
+      default: `no image`,
       require: false,
     },
     image: {
       type: String,
+
+      default: `public/imgs/No-Image-Placeholder.svg.png`,
+
       require: false,
     },
     Store: {

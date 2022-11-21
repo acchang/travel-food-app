@@ -20,6 +20,11 @@ a:active {
   color: #1d4d4e;
 }
 
+.warning {
+  font-size: 10px;
+  text-align: center;
+}
+
 .container {
   width: 100%;
 }

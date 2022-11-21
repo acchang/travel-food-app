@@ -69,8 +69,10 @@ getCity: async (req, res) => {
         Nabe: req.body.Nabe === '' ? undefined : req.body.Nabe,
         Price: req.body.Price === '' ? undefined : req.body.Price,
         createdAt: req.body.createdAt === '' ? undefined : req.body.createdAt,
+
         image: result.secure_url,
         cloudinaryId: result.public_id,
+
         Details: req.body.Details === '' ? undefined : req.body.Details,
         likes: 0,
         user: req.user.id,
