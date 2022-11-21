@@ -22,6 +22,9 @@ The use of the header to contain the nav bar when logged in, and to hold Login/S
 
 ## Optimizations
 
+* Input -'Add surprise bag' looks like plain text. It might help to make it a button or otherwise emphasize it.
+* Input -The name is so similar to TooGoodToGo that I didn't realize the description was about another app. I'd add a sentence or two about what your app does, like 'TooGoodToBeASurprise is a platform for buyers to share the contents of their surprise bags.'
+
 * Sometimes cyclic crashes. I've been told it's a quirk of its interaction with MongoDB:
 
 ```
