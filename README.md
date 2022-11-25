@@ -24,6 +24,7 @@ The use of the header to contain the nav bar when logged in, and to hold Login/S
 
 * Input -'Add surprise bag' looks like plain text. It might help to make it a button or otherwise emphasize it.
 * Input -The name is so similar to TooGoodToGo that I didn't realize the description was about another app. I'd add a sentence or two about what your app does, like 'TooGoodToBeASurprise is a platform for buyers to share the contents of their surprise bags.'
+* Input - "better to have client-side validation code to begin with. Especially since this is JS to begin with. ... do all your checks for a valid submission using Javascript before you actually post all the info to the backend...  needs user friendly error handling. I tried adding an entry and for some reason it said invalid file type on the image I was trying to upload."
 
 * Sometimes cyclic crashes. I've been told it's a quirk of its interaction with MongoDB:
 
